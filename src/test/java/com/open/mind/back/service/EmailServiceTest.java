@@ -1,6 +1,7 @@
 package com.open.mind.back.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
@@ -27,6 +28,10 @@ public class EmailServiceTest {
   @BeforeEach
   public void init() {
     this.postService = new PostImpl(postRepository, commentaryRepository, userService);
+  }
+  @Test
+  void alwaysFail(){
+    fail();
   }
 
   @Test

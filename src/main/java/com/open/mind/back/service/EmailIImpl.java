@@ -1,7 +1,7 @@
 package com.open.mind.back.service;
 
-import com.open.mind.back.model.User;
 import com.open.mind.back.model.JwtType;
+import com.open.mind.back.model.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -14,7 +14,7 @@ public class EmailIImpl implements EmailInterface {
   private final JavaMailSender emailSender;
   private final TokenInterface tokenInterface;
 
-  public void sendMessage(String to, String subject, String text) {
+  private void sendMessage(String to, String subject, String text) {
     SimpleMailMessage message = new SimpleMailMessage();
     message.setTo(to);
     message.setSubject(subject);
