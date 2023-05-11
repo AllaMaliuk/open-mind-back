@@ -1,0 +1,1052 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230511 19:43:01.637" rpa="false" schemaversion="3">
+<suite id="s1" name="DefaultSuite" source="D:\prog\open mind\open-mind-back\src\test\robot\DefaultSuite">
+<suite id="s1-s1" name="1Register" source="D:\prog\open mind\open-mind-back\src\test\robot\DefaultSuite\1Register.robot">
+<test id="s1-s1-t1" name="robotframework-testing_selenium" line="9">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 19:43:01.881" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<msg timestamp="20230511 19:43:01.895" level="INFO">Executing: C:\Users\vovas\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230511 19:43:01.881" endtime="20230511 19:43:03.936"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230511 19:43:03.936" endtime="20230511 19:43:03.936"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:01.880" endtime="20230511 19:43:03.936"/>
+</kw>
+<kw name="click">
+<arg>id=register</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:03.938" level="INFO">Clicking element 'id=register'.</msg>
+<status status="PASS" starttime="20230511 19:43:03.937" endtime="20230511 19:43:04.318"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:03.937" endtime="20230511 19:43:04.319"/>
+</kw>
+<kw name="click">
+<arg>id=email</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:04.320" level="INFO">Clicking element 'id=email'.</msg>
+<status status="PASS" starttime="20230511 19:43:04.319" endtime="20230511 19:43:04.369"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:04.319" endtime="20230511 19:43:04.369"/>
+</kw>
+<kw name="type">
+<arg>id=email</arg>
+<arg>test@test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:04.370" level="INFO">Typing text 'test@test' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20230511 19:43:04.370" endtime="20230511 19:43:04.518"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:04.369" endtime="20230511 19:43:04.518"/>
+</kw>
+<kw name="click">
+<arg>id=username</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:04.519" level="INFO">Clicking element 'id=username'.</msg>
+<status status="PASS" starttime="20230511 19:43:04.519" endtime="20230511 19:43:04.564"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:04.518" endtime="20230511 19:43:04.564"/>
+</kw>
+<kw name="type">
+<arg>id=username</arg>
+<arg>test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:04.565" level="INFO">Typing text 'test' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20230511 19:43:04.565" endtime="20230511 19:43:04.645"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:04.565" endtime="20230511 19:43:04.645"/>
+</kw>
+<kw name="click">
+<arg>id=password</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:04.646" level="INFO">Clicking element 'id=password'.</msg>
+<status status="PASS" starttime="20230511 19:43:04.646" endtime="20230511 19:43:04.688"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:04.645" endtime="20230511 19:43:04.688"/>
+</kw>
+<kw name="type">
+<arg>id=password</arg>
+<arg>test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:04.689" level="INFO">Typing text 'test' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230511 19:43:04.689" endtime="20230511 19:43:04.768"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:04.689" endtime="20230511 19:43:04.768"/>
+</kw>
+<kw name="click">
+<arg>css=.css-164r41r</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:04.769" level="INFO">Clicking element 'css=.css-164r41r'.</msg>
+<status status="PASS" starttime="20230511 19:43:04.769" endtime="20230511 19:43:04.810"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:04.768" endtime="20230511 19:43:04.810"/>
+</kw>
+<kw name="click">
+<arg>id=confirmPassword</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:04.811" level="INFO">Clicking element 'id=confirmPassword'.</msg>
+<status status="PASS" starttime="20230511 19:43:04.811" endtime="20230511 19:43:04.857"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:04.811" endtime="20230511 19:43:04.858"/>
+</kw>
+<kw name="type">
+<arg>id=confirmPassword</arg>
+<arg>test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:04.859" level="INFO">Typing text 'test' into text field 'id=confirmPassword'.</msg>
+<status status="PASS" starttime="20230511 19:43:04.858" endtime="20230511 19:43:04.940"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:04.858" endtime="20230511 19:43:04.940"/>
+</kw>
+<kw name="click">
+<arg>id=registerButton</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:04.941" level="INFO">Clicking element 'id=registerButton'.</msg>
+<status status="PASS" starttime="20230511 19:43:04.941" endtime="20230511 19:43:04.996"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:04.941" endtime="20230511 19:43:04.997"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230511 19:43:04.997" endtime="20230511 19:43:07.106"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:01.880" endtime="20230511 19:43:07.107"/>
+</test>
+<status status="PASS" starttime="20230511 19:43:01.660" endtime="20230511 19:43:07.108"/>
+</suite>
+<suite id="s1-s2" name="2ForgotPassword" source="D:\prog\open mind\open-mind-back\src\test\robot\DefaultSuite\2ForgotPassword.robot">
+<test id="s1-s2-t1" name="robotframework-testing_selenium" line="9">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 19:43:07.115" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<msg timestamp="20230511 19:43:07.128" level="INFO">Executing: C:\Users\vovas\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230511 19:43:07.114" endtime="20230511 19:43:09.255"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230511 19:43:09.255" endtime="20230511 19:43:09.256"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:07.114" endtime="20230511 19:43:09.256"/>
+</kw>
+<kw name="click">
+<arg>id=forgotPassword</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:09.257" level="INFO">Clicking element 'id=forgotPassword'.</msg>
+<status status="PASS" starttime="20230511 19:43:09.256" endtime="20230511 19:43:09.608"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:09.256" endtime="20230511 19:43:09.608"/>
+</kw>
+<kw name="click">
+<arg>id=email</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:09.609" level="INFO">Clicking element 'id=email'.</msg>
+<status status="PASS" starttime="20230511 19:43:09.609" endtime="20230511 19:43:09.657"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:09.609" endtime="20230511 19:43:09.658"/>
+</kw>
+<kw name="type">
+<arg>id=email</arg>
+<arg>test@test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:09.659" level="INFO">Typing text 'test@test' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20230511 19:43:09.658" endtime="20230511 19:43:09.778"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:09.658" endtime="20230511 19:43:09.778"/>
+</kw>
+<kw name="click">
+<arg>id=submitEmail</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:09.780" level="INFO">Clicking element 'id=submitEmail'.</msg>
+<status status="PASS" starttime="20230511 19:43:09.779" endtime="20230511 19:43:09.834"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:09.779" endtime="20230511 19:43:09.835"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230511 19:43:09.836" endtime="20230511 19:43:11.936"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:07.114" endtime="20230511 19:43:11.937"/>
+</test>
+<status status="PASS" starttime="20230511 19:43:07.109" endtime="20230511 19:43:11.938"/>
+</suite>
+<suite id="s1-s3" name="3Login" source="D:\prog\open mind\open-mind-back\src\test\robot\DefaultSuite\3Login.robot">
+<test id="s1-s3-t1" name="robotframework-testing_selenium" line="9">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 19:43:11.947" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<msg timestamp="20230511 19:43:11.965" level="INFO">Executing: C:\Users\vovas\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230511 19:43:11.946" endtime="20230511 19:43:13.972"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230511 19:43:13.972" endtime="20230511 19:43:13.973"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:11.946" endtime="20230511 19:43:13.973"/>
+</kw>
+<kw name="type">
+<arg>id=email</arg>
+<arg>test@test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:13.974" level="INFO">Typing text 'test@test' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20230511 19:43:13.973" endtime="20230511 19:43:14.416"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:13.973" endtime="20230511 19:43:14.416"/>
+</kw>
+<kw name="click">
+<arg>id=password</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:14.417" level="INFO">Clicking element 'id=password'.</msg>
+<status status="PASS" starttime="20230511 19:43:14.417" endtime="20230511 19:43:14.469"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:14.416" endtime="20230511 19:43:14.470"/>
+</kw>
+<kw name="type">
+<arg>id=password</arg>
+<arg>test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:14.471" level="INFO">Typing text 'test' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230511 19:43:14.470" endtime="20230511 19:43:14.540"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:14.470" endtime="20230511 19:43:14.541"/>
+</kw>
+<kw name="click">
+<arg>id=loginButton</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:14.542" level="INFO">Clicking element 'id=loginButton'.</msg>
+<status status="PASS" starttime="20230511 19:43:14.541" endtime="20230511 19:43:14.593"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:14.541" endtime="20230511 19:43:14.593"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230511 19:43:14.594" endtime="20230511 19:43:16.706"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:11.945" endtime="20230511 19:43:16.706"/>
+</test>
+<status status="PASS" starttime="20230511 19:43:11.940" endtime="20230511 19:43:16.707"/>
+</suite>
+<suite id="s1-s4" name="4Profile" source="D:\prog\open mind\open-mind-back\src\test\robot\DefaultSuite\4Profile.robot">
+<test id="s1-s4-t1" name="robotframework-testing_selenium" line="9">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 19:43:16.713" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<msg timestamp="20230511 19:43:16.726" level="INFO">Executing: C:\Users\vovas\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230511 19:43:16.712" endtime="20230511 19:43:18.739"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230511 19:43:18.739" endtime="20230511 19:43:18.740"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:16.712" endtime="20230511 19:43:18.740"/>
+</kw>
+<kw name="type">
+<arg>id=email</arg>
+<arg>test@test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:18.741" level="INFO">Typing text 'test@test' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20230511 19:43:18.741" endtime="20230511 19:43:20.618"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:18.740" endtime="20230511 19:43:20.618"/>
+</kw>
+<kw name="click">
+<arg>id=password</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:20.620" level="INFO">Clicking element 'id=password'.</msg>
+<status status="PASS" starttime="20230511 19:43:20.619" endtime="20230511 19:43:21.677"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:20.619" endtime="20230511 19:43:21.677"/>
+</kw>
+<kw name="type">
+<arg>id=password</arg>
+<arg>test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:21.678" level="INFO">Typing text 'test' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230511 19:43:21.678" endtime="20230511 19:43:23.248"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:21.677" endtime="20230511 19:43:23.248"/>
+</kw>
+<kw name="click">
+<arg>id=loginButton</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:23.249" level="INFO">Clicking element 'id=loginButton'.</msg>
+<status status="PASS" starttime="20230511 19:43:23.248" endtime="20230511 19:43:24.304"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:23.248" endtime="20230511 19:43:24.304"/>
+</kw>
+<kw name="click">
+<arg>id=myProfile</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:24.306" level="INFO">Clicking element 'id=myProfile'.</msg>
+<status status="PASS" starttime="20230511 19:43:24.305" endtime="20230511 19:43:25.367"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:24.305" endtime="20230511 19:43:25.367"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230511 19:43:25.368" endtime="20230511 19:43:27.933"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:16.712" endtime="20230511 19:43:27.934"/>
+</test>
+<status status="PASS" starttime="20230511 19:43:16.708" endtime="20230511 19:43:27.935"/>
+</suite>
+<suite id="s1-s5" name="5ProfileInfoModify" source="D:\prog\open mind\open-mind-back\src\test\robot\DefaultSuite\5ProfileInfoModify.robot">
+<test id="s1-s5-t1" name="robotframework-testing_selenium" line="9">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 19:43:27.948" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<msg timestamp="20230511 19:43:27.961" level="INFO">Executing: C:\Users\vovas\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230511 19:43:27.948" endtime="20230511 19:43:30.458"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230511 19:43:30.458" endtime="20230511 19:43:30.459"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:27.947" endtime="20230511 19:43:30.459"/>
+</kw>
+<kw name="type">
+<arg>id=email</arg>
+<arg>test@test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:30.461" level="INFO">Typing text 'test@test' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20230511 19:43:30.460" endtime="20230511 19:43:32.128"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:30.460" endtime="20230511 19:43:32.128"/>
+</kw>
+<kw name="click">
+<arg>id=password</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:32.129" level="INFO">Clicking element 'id=password'.</msg>
+<status status="PASS" starttime="20230511 19:43:32.129" endtime="20230511 19:43:33.185"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:32.128" endtime="20230511 19:43:33.185"/>
+</kw>
+<kw name="type">
+<arg>id=password</arg>
+<arg>test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:33.186" level="INFO">Typing text 'test' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230511 19:43:33.185" endtime="20230511 19:43:34.755"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:33.185" endtime="20230511 19:43:34.755"/>
+</kw>
+<kw name="click">
+<arg>id=loginButton</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:34.758" level="INFO">Clicking element 'id=loginButton'.</msg>
+<status status="PASS" starttime="20230511 19:43:34.756" endtime="20230511 19:43:35.829"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:34.756" endtime="20230511 19:43:35.829"/>
+</kw>
+<kw name="click">
+<arg>id=myProfile</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:35.831" level="INFO">Clicking element 'id=myProfile'.</msg>
+<status status="PASS" starttime="20230511 19:43:35.830" endtime="20230511 19:43:36.900"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:35.830" endtime="20230511 19:43:36.900"/>
+</kw>
+<kw name="click">
+<arg>id=modifyInfoButton</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:36.902" level="INFO">Clicking element 'id=modifyInfoButton'.</msg>
+<status status="PASS" starttime="20230511 19:43:36.902" endtime="20230511 19:43:37.971"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:36.901" endtime="20230511 19:43:37.971"/>
+</kw>
+<kw name="click">
+<arg>id=modifyDataButton</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:37.972" level="INFO">Clicking element 'id=modifyDataButton'.</msg>
+<status status="PASS" starttime="20230511 19:43:37.971" endtime="20230511 19:43:39.023"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:37.971" endtime="20230511 19:43:39.023"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230511 19:43:39.023" endtime="20230511 19:43:41.578"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:27.947" endtime="20230511 19:43:41.578"/>
+</test>
+<status status="PASS" starttime="20230511 19:43:27.938" endtime="20230511 19:43:41.579"/>
+</suite>
+<suite id="s1-s6" name="6profilePasswordModify" source="D:\prog\open mind\open-mind-back\src\test\robot\DefaultSuite\6profilePasswordModify.robot">
+<test id="s1-s6-t1" name="robotframework-testing_selenium" line="9">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 19:43:41.587" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<msg timestamp="20230511 19:43:41.600" level="INFO">Executing: C:\Users\vovas\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230511 19:43:41.587" endtime="20230511 19:43:44.237"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230511 19:43:44.237" endtime="20230511 19:43:44.237"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:41.586" endtime="20230511 19:43:44.237"/>
+</kw>
+<kw name="click">
+<arg>id=email</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:44.240" level="INFO">Clicking element 'id=email'.</msg>
+<status status="PASS" starttime="20230511 19:43:44.239" endtime="20230511 19:43:45.298"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:44.238" endtime="20230511 19:43:45.298"/>
+</kw>
+<kw name="type">
+<arg>id=email</arg>
+<arg>test@test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:45.299" level="INFO">Typing text 'test@test' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20230511 19:43:45.298" endtime="20230511 19:43:46.944"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:45.298" endtime="20230511 19:43:46.944"/>
+</kw>
+<kw name="click">
+<arg>id=password</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:46.945" level="INFO">Clicking element 'id=password'.</msg>
+<status status="PASS" starttime="20230511 19:43:46.944" endtime="20230511 19:43:47.996"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:46.944" endtime="20230511 19:43:47.996"/>
+</kw>
+<kw name="type">
+<arg>id=password</arg>
+<arg>test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:47.997" level="INFO">Typing text 'test' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230511 19:43:47.996" endtime="20230511 19:43:49.570"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:47.996" endtime="20230511 19:43:49.570"/>
+</kw>
+<kw name="click">
+<arg>id=loginButton</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:49.571" level="INFO">Clicking element 'id=loginButton'.</msg>
+<status status="PASS" starttime="20230511 19:43:49.570" endtime="20230511 19:43:50.626"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:49.570" endtime="20230511 19:43:50.626"/>
+</kw>
+<kw name="click">
+<arg>css=#myProfile &gt; p</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:50.628" level="INFO">Clicking element 'css=#myProfile &gt; p'.</msg>
+<status status="PASS" starttime="20230511 19:43:50.627" endtime="20230511 19:43:51.700"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:50.627" endtime="20230511 19:43:51.700"/>
+</kw>
+<kw name="click">
+<arg>id=modifyPasswordButton</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:51.703" level="INFO">Clicking element 'id=modifyPasswordButton'.</msg>
+<status status="PASS" starttime="20230511 19:43:51.702" endtime="20230511 19:43:52.771"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:51.701" endtime="20230511 19:43:52.771"/>
+</kw>
+<kw name="type">
+<arg>id=password</arg>
+<arg>test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:52.772" level="INFO">Typing text 'test' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230511 19:43:52.771" endtime="20230511 19:43:54.366"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:52.771" endtime="20230511 19:43:54.366"/>
+</kw>
+<kw name="click">
+<arg>id=confirmPassword</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:54.367" level="INFO">Clicking element 'id=confirmPassword'.</msg>
+<status status="PASS" starttime="20230511 19:43:54.367" endtime="20230511 19:43:55.422"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:54.366" endtime="20230511 19:43:55.422"/>
+</kw>
+<kw name="type">
+<arg>id=confirmPassword</arg>
+<arg>test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:55.426" level="INFO">Typing text 'test' into text field 'id=confirmPassword'.</msg>
+<status status="PASS" starttime="20230511 19:43:55.426" endtime="20230511 19:43:57.023"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:55.425" endtime="20230511 19:43:57.023"/>
+</kw>
+<kw name="click">
+<arg>css=.css-k008qs &gt; #modifyPasswordButton</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:43:57.024" level="INFO">Clicking element 'css=.css-k008qs &gt; #modifyPasswordButton'.</msg>
+<status status="PASS" starttime="20230511 19:43:57.024" endtime="20230511 19:43:58.082"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:57.023" endtime="20230511 19:43:58.082"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230511 19:43:58.082" endtime="20230511 19:44:00.639"/>
+</kw>
+<status status="PASS" starttime="20230511 19:43:41.586" endtime="20230511 19:44:00.640"/>
+</test>
+<status status="PASS" starttime="20230511 19:43:41.580" endtime="20230511 19:44:00.643"/>
+</suite>
+<suite id="s1-s7" name="7NewPost" source="D:\prog\open mind\open-mind-back\src\test\robot\DefaultSuite\7NewPost.robot">
+<test id="s1-s7-t1" name="robotframework-testing_selenium" line="9">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 19:44:00.654" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<msg timestamp="20230511 19:44:00.667" level="INFO">Executing: C:\Users\vovas\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230511 19:44:00.653" endtime="20230511 19:44:03.231"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230511 19:44:03.231" endtime="20230511 19:44:03.232"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:00.653" endtime="20230511 19:44:03.232"/>
+</kw>
+<kw name="click">
+<arg>id=email</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:03.234" level="INFO">Clicking element 'id=email'.</msg>
+<status status="PASS" starttime="20230511 19:44:03.233" endtime="20230511 19:44:04.300"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:03.233" endtime="20230511 19:44:04.300"/>
+</kw>
+<kw name="click">
+<arg>id=email</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:04.302" level="INFO">Clicking element 'id=email'.</msg>
+<status status="PASS" starttime="20230511 19:44:04.301" endtime="20230511 19:44:05.351"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:04.301" endtime="20230511 19:44:05.351"/>
+</kw>
+<kw name="type">
+<arg>id=email</arg>
+<arg>test@test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:05.352" level="INFO">Typing text 'test@test' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20230511 19:44:05.351" endtime="20230511 19:44:06.985"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:05.351" endtime="20230511 19:44:06.985"/>
+</kw>
+<kw name="click">
+<arg>id=password</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:06.986" level="INFO">Clicking element 'id=password'.</msg>
+<status status="PASS" starttime="20230511 19:44:06.985" endtime="20230511 19:44:08.040"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:06.985" endtime="20230511 19:44:08.040"/>
+</kw>
+<kw name="type">
+<arg>id=password</arg>
+<arg>test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:08.041" level="INFO">Typing text 'test' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230511 19:44:08.040" endtime="20230511 19:44:09.619"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:08.040" endtime="20230511 19:44:09.619"/>
+</kw>
+<kw name="click">
+<arg>id=loginButton</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:09.621" level="INFO">Clicking element 'id=loginButton'.</msg>
+<status status="PASS" starttime="20230511 19:44:09.621" endtime="20230511 19:44:10.681"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:09.620" endtime="20230511 19:44:10.681"/>
+</kw>
+<kw name="click">
+<arg>id=newPostButton</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:10.683" level="INFO">Clicking element 'id=newPostButton'.</msg>
+<status status="PASS" starttime="20230511 19:44:10.682" endtime="20230511 19:44:11.755"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:10.682" endtime="20230511 19:44:11.755"/>
+</kw>
+<kw name="type">
+<arg>id=postTheme</arg>
+<arg>test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:11.756" level="INFO">Typing text 'test' into text field 'id=postTheme'.</msg>
+<status status="PASS" starttime="20230511 19:44:11.755" endtime="20230511 19:44:13.337"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:11.755" endtime="20230511 19:44:13.337"/>
+</kw>
+<kw name="click">
+<arg>id=postContent</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:13.340" level="INFO">Clicking element 'id=postContent'.</msg>
+<status status="PASS" starttime="20230511 19:44:13.339" endtime="20230511 19:44:14.399"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:13.338" endtime="20230511 19:44:14.399"/>
+</kw>
+<kw name="type">
+<arg>id=postContent</arg>
+<arg>test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:14.402" level="INFO">Typing text 'test' into text field 'id=postContent'.</msg>
+<status status="PASS" starttime="20230511 19:44:14.400" endtime="20230511 19:44:16.003"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:14.400" endtime="20230511 19:44:16.003"/>
+</kw>
+<kw name="click">
+<arg>id=createPostButton</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:16.005" level="INFO">Clicking element 'id=createPostButton'.</msg>
+<status status="PASS" starttime="20230511 19:44:16.004" endtime="20230511 19:44:17.060"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:16.004" endtime="20230511 19:44:17.060"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230511 19:44:17.060" endtime="20230511 19:44:19.621"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:00.652" endtime="20230511 19:44:19.622"/>
+</test>
+<status status="PASS" starttime="20230511 19:44:00.647" endtime="20230511 19:44:19.625"/>
+</suite>
+<suite id="s1-s8" name="8ViewPostAndComment" source="D:\prog\open mind\open-mind-back\src\test\robot\DefaultSuite\8ViewPostAndComment.robot">
+<test id="s1-s8-t1" name="robotframework-testing_selenium" line="9">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 19:44:19.640" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<msg timestamp="20230511 19:44:19.654" level="INFO">Executing: C:\Users\vovas\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230511 19:44:19.640" endtime="20230511 19:44:22.224"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230511 19:44:22.224" endtime="20230511 19:44:22.225"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:19.640" endtime="20230511 19:44:22.225"/>
+</kw>
+<kw name="click">
+<arg>id=email</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:22.228" level="INFO">Clicking element 'id=email'.</msg>
+<status status="PASS" starttime="20230511 19:44:22.227" endtime="20230511 19:44:23.292"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:22.226" endtime="20230511 19:44:23.292"/>
+</kw>
+<kw name="type">
+<arg>id=email</arg>
+<arg>test@test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:23.294" level="INFO">Typing text 'test@test' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20230511 19:44:23.293" endtime="20230511 19:44:24.939"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:23.293" endtime="20230511 19:44:24.939"/>
+</kw>
+<kw name="click">
+<arg>id=password</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:24.940" level="INFO">Clicking element 'id=password'.</msg>
+<status status="PASS" starttime="20230511 19:44:24.939" endtime="20230511 19:44:25.997"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:24.939" endtime="20230511 19:44:25.997"/>
+</kw>
+<kw name="type">
+<arg>id=password</arg>
+<arg>test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:25.998" level="INFO">Typing text 'test' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230511 19:44:25.998" endtime="20230511 19:44:27.569"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:25.997" endtime="20230511 19:44:27.569"/>
+</kw>
+<kw name="click">
+<arg>id=loginButton</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:27.570" level="INFO">Clicking element 'id=loginButton'.</msg>
+<status status="PASS" starttime="20230511 19:44:27.570" endtime="20230511 19:44:28.631"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:27.570" endtime="20230511 19:44:28.631"/>
+</kw>
+<kw name="click">
+<arg>id=detailsButton</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:28.632" level="INFO">Clicking element 'id=detailsButton'.</msg>
+<status status="PASS" starttime="20230511 19:44:28.631" endtime="20230511 19:44:29.690"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:28.631" endtime="20230511 19:44:29.690"/>
+</kw>
+<kw name="click">
+<arg>id=commentary</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:29.691" level="INFO">Clicking element 'id=commentary'.</msg>
+<status status="PASS" starttime="20230511 19:44:29.691" endtime="20230511 19:44:30.756"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:29.690" endtime="20230511 19:44:30.756"/>
+</kw>
+<kw name="type">
+<arg>id=commentary</arg>
+<arg>test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:30.761" level="INFO">Typing text 'test' into text field 'id=commentary'.</msg>
+<status status="PASS" starttime="20230511 19:44:30.760" endtime="20230511 19:44:32.349"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:30.760" endtime="20230511 19:44:32.349"/>
+</kw>
+<kw name="click">
+<arg>id=commentarySubmitButton</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:32.352" level="INFO">Clicking element 'id=commentarySubmitButton'.</msg>
+<status status="PASS" starttime="20230511 19:44:32.351" endtime="20230511 19:44:33.423"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:32.350" endtime="20230511 19:44:33.423"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230511 19:44:33.424" endtime="20230511 19:44:35.978"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:19.639" endtime="20230511 19:44:35.979"/>
+</test>
+<status status="PASS" starttime="20230511 19:44:19.630" endtime="20230511 19:44:35.982"/>
+</suite>
+<suite id="s1-s9" name="Logout" source="D:\prog\open mind\open-mind-back\src\test\robot\DefaultSuite\Logout.robot">
+<test id="s1-s9-t1" name="robotframework-testing_selenium" line="9">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:3000/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 19:44:35.995" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<msg timestamp="20230511 19:44:36.008" level="INFO">Executing: C:\Users\vovas\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230511 19:44:35.994" endtime="20230511 19:44:38.534"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230511 19:44:38.534" endtime="20230511 19:44:38.535"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:35.994" endtime="20230511 19:44:38.535"/>
+</kw>
+<kw name="click">
+<arg>id=email</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:38.537" level="INFO">Clicking element 'id=email'.</msg>
+<status status="PASS" starttime="20230511 19:44:38.536" endtime="20230511 19:44:39.604"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:38.536" endtime="20230511 19:44:39.604"/>
+</kw>
+<kw name="type">
+<arg>id=email</arg>
+<arg>test@test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:39.607" level="INFO">Typing text 'test@test' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20230511 19:44:39.606" endtime="20230511 19:44:41.256"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:39.605" endtime="20230511 19:44:41.256"/>
+</kw>
+<kw name="click">
+<arg>id=password</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:41.257" level="INFO">Clicking element 'id=password'.</msg>
+<status status="PASS" starttime="20230511 19:44:41.256" endtime="20230511 19:44:42.309"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:41.256" endtime="20230511 19:44:42.309"/>
+</kw>
+<kw name="type">
+<arg>id=password</arg>
+<arg>test</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:42.310" level="INFO">Typing text 'test' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230511 19:44:42.309" endtime="20230511 19:44:43.885"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:42.309" endtime="20230511 19:44:43.885"/>
+</kw>
+<kw name="click">
+<arg>id=loginButton</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:43.886" level="INFO">Clicking element 'id=loginButton'.</msg>
+<status status="PASS" starttime="20230511 19:44:43.886" endtime="20230511 19:44:44.943"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:43.885" endtime="20230511 19:44:44.943"/>
+</kw>
+<kw name="click">
+<arg>id=header-log-oug-button</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230511 19:44:44.945" level="INFO">Clicking element 'id=header-log-oug-button'.</msg>
+<status status="PASS" starttime="20230511 19:44:44.944" endtime="20230511 19:44:46.010"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:44.944" endtime="20230511 19:44:46.010"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230511 19:44:46.010" endtime="20230511 19:44:48.572"/>
+</kw>
+<status status="PASS" starttime="20230511 19:44:35.992" endtime="20230511 19:44:48.572"/>
+</test>
+<status status="PASS" starttime="20230511 19:44:35.987" endtime="20230511 19:44:48.574"/>
+</suite>
+<status status="PASS" starttime="20230511 19:43:01.639" endtime="20230511 19:44:48.578"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="9" fail="0" skip="0" id="s1" name="DefaultSuite">DefaultSuite</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="1Register">DefaultSuite.1Register</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="2ForgotPassword">DefaultSuite.2ForgotPassword</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="3Login">DefaultSuite.3Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s4" name="4Profile">DefaultSuite.4Profile</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s5" name="5ProfileInfoModify">DefaultSuite.5ProfileInfoModify</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s6" name="6profilePasswordModify">DefaultSuite.6profilePasswordModify</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s7" name="7NewPost">DefaultSuite.7NewPost</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s8" name="8ViewPostAndComment">DefaultSuite.8ViewPostAndComment</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s9" name="Logout">DefaultSuite.Logout</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
