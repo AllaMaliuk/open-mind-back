@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  build-and-test:
+  build-and-test-and-spot-bugs:
     docker:
       - image: cimg/openjdk:17.0
     steps:
@@ -12,13 +12,16 @@ jobs:
       - run:
           name: Test
           command: mvn test
+      - run:
+        name: Spot Bug
+        command: mvn spotbugs:check
   checkstyle:
     docker:
       - image: cimg/openjdk:17.0
     steps:
       - checkout
       - run:
-          name: Test
+          name: Checkstyle
           command: mvn checkstyle:check
 
 workflows:
