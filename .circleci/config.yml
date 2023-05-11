@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  build-and-test-and-spot-bugs:
+  build-and-test:
     docker:
       - image: cimg/openjdk:17.0
     steps:
@@ -27,5 +27,5 @@ jobs:
 workflows:
   sample:
     jobs:
-      - build-and-test-and-spot-bugs
+      - build-and-test
       - checkstyle
