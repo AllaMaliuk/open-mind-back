@@ -12,8 +12,17 @@ jobs:
       - run:
           name: Test
           command: mvn test
+  checkstyle:
+    docker:
+      - image: cimg/openjdk:17.0
+    steps:
+      - checkout
+      - run:
+          name: Test
+          command: mvn checkstyle:check
 
 workflows:
-  sample: 
+  sample:
     jobs:
       - build-and-test
+      - checkstyle

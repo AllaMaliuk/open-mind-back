@@ -29,10 +29,6 @@ public class EmailServiceTest {
   public void init() {
     this.postService = new PostImpl(postRepository, commentaryRepository, userService);
   }
-  @Test
-  void alwaysFail(){
-    fail();
-  }
 
   @Test
   void testGetPostByIdReturnEmpty() {

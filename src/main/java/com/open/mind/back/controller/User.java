@@ -1,8 +1,8 @@
 package com.open.mind.back.controller;
 
 import com.open.mind.back.dto.AccountChangePasswordRequest;
-import com.open.mind.back.dto.UserDataRequest;
 import com.open.mind.back.dto.AuthorizationTokenResponse;
+import com.open.mind.back.dto.UserDataRequest;
 import com.open.mind.back.dto.UserResponse;
 import com.open.mind.back.mappers.Mapper;
 import com.open.mind.back.model.JwtType;
@@ -28,12 +28,23 @@ public class User {
   private UserInterface userInterface;
   private TokenInterface tokenInterface;
 
+  /**
+   * getUser.
+   *
+   * @return UserResponse.
+   */
   @GetMapping
   @Operation(security = @SecurityRequirement(name = "Authorization"))
   public ResponseEntity<UserResponse> getUser() {
     return ResponseEntity.ok(Mapper.I.userModelToResponseDto(userInterface.getAuthenticatedUser()));
   }
 
+  /**
+   * changeUserData.
+   *
+   * @param requestDto UserDataRequest.
+   * @return AuthorizationTokenResponse.
+   */
   @PatchMapping("/data")
   @Operation(security = @SecurityRequirement(name = "Authorization"))
   public ResponseEntity<AuthorizationTokenResponse> changeUserData(
@@ -50,6 +61,12 @@ public class User {
             .build());
   }
 
+  /**
+   * changeUserPassword.
+   *
+   * @param requestDto AccountChangePasswordRequest.
+   * @return HttpStatus.
+   */
   @PatchMapping("/password")
   @Operation(security = @SecurityRequirement(name = "Authorization"))
   public ResponseEntity<HttpStatus> changeUserPassword(

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 /** GmailServiceImpl. */
 @Service
 @RequiredArgsConstructor
-public class EmailIImpl implements EmailInterface {
+public class EmailImpl implements EmailInterface {
   private final JavaMailSender emailSender;
   private final TokenInterface tokenInterface;
 

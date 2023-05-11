@@ -1,7 +1,5 @@
 package com.open.mind.back.service;
 
-import com.open.mind.back.model.JwtType;
-import com.open.mind.back.exceptions.TokenException;
 import com.nimbusds.jose.EncryptionMethod;
 import com.nimbusds.jose.JOSEException;
 import com.nimbusds.jose.JWEAlgorithm;
@@ -18,6 +16,8 @@ import com.nimbusds.jose.proc.SimpleSecurityContext;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.proc.ConfigurableJWTProcessor;
 import com.nimbusds.jwt.proc.DefaultJWTProcessor;
+import com.open.mind.back.exceptions.TokenException;
+import com.open.mind.back.model.JwtType;
 import jakarta.annotation.PostConstruct;
 import java.text.ParseException;
 import java.util.Date;
@@ -30,6 +30,7 @@ import org.springframework.stereotype.Service;
 public class TokenImpl implements TokenInterface {
   @Value("${app.security.jwt.secret}")
   private byte[] secretKey;
+
   private final ConfigurableJWTProcessor<SimpleSecurityContext> jwtProcessor =
       new DefaultJWTProcessor<>();
 
@@ -71,8 +72,7 @@ public class TokenImpl implements TokenInterface {
       jweObject.encrypt(encrypter);
       return jweObject.serialize();
     } catch (JOSEException e) {
-      throw new TokenException(
-          Map.of("token", "Jwt creation error"), "Jwt unknown error");
+      throw new TokenException(Map.of("token", "Jwt creation error"), "Jwt unknown error");
     }
   }
 
@@ -88,16 +88,12 @@ public class TokenImpl implements TokenInterface {
 
   @Override
   public Boolean isEmailActivationToken(String jwt) {
-    return getJwtClaimsSetFromToken(jwt)
-        .getClaim("type")
-        .equals(JwtType.EMAIL_ACTIVATION.name());
+    return getJwtClaimsSetFromToken(jwt).getClaim("type").equals(JwtType.EMAIL_ACTIVATION.name());
   }
 
   @Override
   public Boolean isPasswordForgottenToken(String jwt) {
-    return getJwtClaimsSetFromToken(jwt)
-        .getClaim("type")
-        .equals(JwtType.PASSWORD_FORGOT.name());
+    return getJwtClaimsSetFromToken(jwt).getClaim("type").equals(JwtType.PASSWORD_FORGOT.name());
   }
 
   private JWTClaimsSet getJwtClaimsSetFromToken(String jwt) {
@@ -110,8 +106,7 @@ public class TokenImpl implements TokenInterface {
               (e.getMessage().equals("Expired JWT")) ? "Link expired" : "Jwt verification error"),
           "Jwt error");
     } catch (ParseException | JOSEException e) {
-      throw new TokenException(
-          Map.of("token", "Jwt verification error"), "Jwt unknown error");
+      throw new TokenException(Map.of("token", "Jwt verification error"), "Jwt unknown error");
     }
   }
 }

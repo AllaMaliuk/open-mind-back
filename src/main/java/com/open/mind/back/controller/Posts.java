@@ -1,8 +1,8 @@
 package com.open.mind.back.controller;
 
 import com.open.mind.back.dto.CommentaryRequest;
-import com.open.mind.back.dto.PostRequest;
 import com.open.mind.back.dto.CommentaryResponse;
+import com.open.mind.back.dto.PostRequest;
 import com.open.mind.back.dto.PostResponse;
 import com.open.mind.back.dto.UserPostsResponse;
 import com.open.mind.back.mappers.Mapper;
@@ -26,6 +26,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class Posts {
   private PostInterface postInterface;
 
+  /**
+   * getAllPosts.
+   *
+   * @return UserPostsResponse.
+   */
   @GetMapping
   @Operation(security = @SecurityRequirement(name = "Authorization"))
   public ResponseEntity<UserPostsResponse> getAllPosts() {
@@ -37,20 +42,30 @@ public class Posts {
 
   @GetMapping("/{postId}")
   @Operation(security = @SecurityRequirement(name = "Authorization"))
-  public ResponseEntity<PostResponse> getPostById(
-      @PathVariable(value = "postId") String postId) {
+  public ResponseEntity<PostResponse> getPostById(@PathVariable(value = "postId") String postId) {
     return ResponseEntity.ok(Mapper.I.postModelToResponseDto(postInterface.getPostById(postId)));
   }
 
+  /**
+   * createNewPost.
+   *
+   * @param requestDto PostRequest.
+   * @return PostResponse.
+   */
   @PostMapping
   @Operation(security = @SecurityRequirement(name = "Authorization"))
-  public ResponseEntity<PostResponse> createNewPost(
-      @Valid @RequestBody PostRequest requestDto) {
+  public ResponseEntity<PostResponse> createNewPost(@Valid @RequestBody PostRequest requestDto) {
     return ResponseEntity.ok(
         Mapper.I.postModelToResponseDto(
             postInterface.createPost(Mapper.I.postRequestDtoToModel(requestDto))));
   }
 
+  /**
+   * createNewPostCommentary.
+   *
+   * @param requestDto CommentaryRequest.
+   * @return CommentaryResponse.
+   */
   @PostMapping("/commentary")
   @Operation(security = @SecurityRequirement(name = "Authorization"))
   public ResponseEntity<CommentaryResponse> createNewPostCommentary(

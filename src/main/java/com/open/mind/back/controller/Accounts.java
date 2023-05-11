@@ -8,8 +8,8 @@ import com.open.mind.back.dto.AuthorizationTokenResponse;
 import com.open.mind.back.dto.UserResponse;
 import com.open.mind.back.exceptions.TokenException;
 import com.open.mind.back.mappers.Mapper;
-import com.open.mind.back.model.User;
 import com.open.mind.back.model.JwtType;
+import com.open.mind.back.model.User;
 import com.open.mind.back.service.EmailInterface;
 import com.open.mind.back.service.TokenInterface;
 import com.open.mind.back.service.UserInterface;
@@ -33,6 +33,12 @@ public class Accounts {
   private final TokenInterface tokenInterface;
   private final EmailInterface emailInterface;
 
+  /**
+   * registerAccount.
+   *
+   * @param requestDto AccountCredentialsRequest.
+   * @return AccountCredentialsRequest.
+   */
   @PostMapping("/register")
   public ResponseEntity<UserResponse> registerAccount(
       @RequestBody @Valid AccountCredentialsRequest requestDto) {
@@ -40,13 +46,17 @@ public class Accounts {
       return ResponseEntity.status(HttpStatus.CREATED)
           .body(Mapper.I.userModelToResponseDto(User.builder().email("test@test").build()));
     }
-    User user =
-        userInterface.registerUser(Mapper.I.accountCredentialsRequestDtoToUser(requestDto));
+    User user = userInterface.registerUser(Mapper.I.accountCredentialsRequestDtoToUser(requestDto));
     emailInterface.sendAccountActivationLink(user);
-    return ResponseEntity.status(HttpStatus.CREATED)
-        .body(Mapper.I.userModelToResponseDto(user));
+    return ResponseEntity.status(HttpStatus.CREATED).body(Mapper.I.userModelToResponseDto(user));
   }
 
+  /**
+   * loginInAccount.
+   *
+   * @param requestDto AccountLoginRequest.
+   * @return AuthorizationTokenResponse.
+   */
   @PostMapping("/login")
   public ResponseEntity<AuthorizationTokenResponse> loginInAccount(
       @RequestBody @Valid AccountLoginRequest requestDto) {
@@ -59,6 +69,12 @@ public class Accounts {
             .build());
   }
 
+  /**
+   * activateAccount.
+   *
+   * @param activationToken activationToken.
+   * @return HttpStatus.
+   */
   @PostMapping("/email/activation/{activationToken}")
   public ResponseEntity<HttpStatus> activateAccount(
       @PathVariable(value = "activationToken") String activationToken) {
@@ -72,6 +88,12 @@ public class Accounts {
     return ResponseEntity.ok().build();
   }
 
+  /**
+   * getEmailForForgottenPassword.
+   *
+   * @param requestDto AccountEmailRequest.
+   * @return HttpStatus.
+   */
   @PostMapping("/password/forgot")
   public ResponseEntity<HttpStatus> getEmailForForgottenPassword(
       @RequestBody @Valid AccountEmailRequest requestDto) {
@@ -82,6 +104,13 @@ public class Accounts {
     return ResponseEntity.ok().build();
   }
 
+  /**
+   * changeForgottenAccountPassword.
+   *
+   * @param passwordResetToken passwordResetToken.
+   * @param requestDto AccountChangePasswordRequest.
+   * @return HttpStatus.
+   */
   @PostMapping("/password/forgot/change/{passwordResetToken}")
   public ResponseEntity<HttpStatus> changeForgottenAccountPassword(
       @PathVariable(value = "passwordResetToken") String passwordResetToken,

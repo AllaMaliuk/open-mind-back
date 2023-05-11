@@ -3,11 +3,11 @@ package com.open.mind.back.mappers;
 import com.open.mind.back.dto.AccountCredentialsRequest;
 import com.open.mind.back.dto.AccountLoginRequest;
 import com.open.mind.back.dto.CommentaryRequest;
+import com.open.mind.back.dto.CommentaryResponse;
 import com.open.mind.back.dto.PostRequest;
 import com.open.mind.back.dto.PostResponse;
 import com.open.mind.back.dto.UserDataRequest;
 import com.open.mind.back.dto.UserResponse;
-import com.open.mind.back.dto.CommentaryResponse;
 import com.open.mind.back.model.Commentary;
 import com.open.mind.back.model.Post;
 import com.open.mind.back.model.SecurityUser;
@@ -108,7 +108,8 @@ public interface Mapper {
    * @param commentaryEntities List of CommentaryEntity.
    * @return List of Commentary.
    */
-  List<Commentary> commentaryEntitiesToModels(List<com.open.mind.back.entity.Commentary> commentaryEntities);
+  List<Commentary> commentaryEntitiesToModels(
+      List<com.open.mind.back.entity.Commentary> commentaryEntities);
 
   /**
    * UserDataRequestDto to UserModel mapper.
@@ -188,6 +189,5 @@ public interface Mapper {
    * @param commentaries List of CommentaryModel.
    * @return List of CommentaryResponseDto.
    */
-  List<CommentaryResponse> commentaryModelsToResponseDtoList(
-      List<Commentary> commentaries);
+  List<CommentaryResponse> commentaryModelsToResponseDtoList(List<Commentary> commentaries);
 }

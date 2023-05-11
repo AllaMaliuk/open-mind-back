@@ -1,10 +1,10 @@
 package com.open.mind.back.service;
 
+import com.open.mind.back.exceptions.CredentialsException;
 import com.open.mind.back.mappers.Mapper;
 import com.open.mind.back.model.SecurityUser;
 import com.open.mind.back.model.User;
 import com.open.mind.back.repository.UserRepository;
-import com.open.mind.back.exceptions.CredentialsException;
 import jakarta.annotation.PostConstruct;
 import java.time.LocalDateTime;
 import java.util.Map;
@@ -22,7 +22,7 @@ public class UserImpl implements UserInterface {
   private final UserRepository userRepository;
   private final PasswordEncoder passwordEncoder;
 
-  /** Test user init */
+  /** Test user init. */
   @PostConstruct
   private void init() {
     com.open.mind.back.entity.User testEntity =
@@ -70,6 +70,12 @@ public class UserImpl implements UserInterface {
                 userRepository.findById(getAuthenticatedUser().getId().toString()).orElseThrow())));
   }
 
+  /**
+   * isCorrectPassword.
+   *
+   * @param user userModel with credentials.
+   * @return boolean.
+   */
   public boolean isCorrectPassword(User user) {
     if (!passwordEncoder.matches(
         user.getPassword(), getUserByEmail(user.getEmail()).getPassword())) {
