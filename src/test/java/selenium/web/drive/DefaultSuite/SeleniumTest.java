@@ -2,11 +2,16 @@ package selenium.web.drive.DefaultSuite;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
+import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -153,7 +158,7 @@ public class SeleniumTest {
   }
 
   @Test
-  public void test1Register() {
+  public void test1Register() throws IOException {
     driver.get("http://localhost:3000/");
     driver.findElement(By.id("register")).click();
     driver.findElement(By.id("email")).click();
@@ -162,6 +167,7 @@ public class SeleniumTest {
     driver.findElement(By.id("username")).click();
     driver.findElement(By.id("username")).clear();
     driver.findElement(By.id("username")).sendKeys("test");
+    screen("register.png");
     driver.findElement(By.id("password")).click();
     driver.findElement(By.id("password")).clear();
     driver.findElement(By.id("password")).sendKeys("test");
@@ -171,6 +177,15 @@ public class SeleniumTest {
     driver.findElement(By.id("confirmPassword")).sendKeys("test");
     driver.findElement(By.id("registerButton")).click();
     driver.close();
+  }
+
+  private void screen(String screenName) throws IOException {
+    TakesScreenshot screenshot = ((TakesScreenshot) driver);
+    File SrcFile = screenshot.getScreenshotAs(OutputType.FILE);
+
+    File DestFile = new File("src/test/java/selenium/web/drive/screenshots/" + screenName);
+
+    FileUtils.copyFile(SrcFile, DestFile);
   }
 
   @AfterEach
